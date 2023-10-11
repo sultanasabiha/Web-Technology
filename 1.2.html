@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning Page</title>
+    <style>
+        body {
+            background-color: red;
+            margin: 0;
+        }
+
+        #warning-message {
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 10%;
+            animation: blink 1s infinite; /* Blinking animation */
+        }
+
+        #scrolling-text {
+            position: fixed;
+            top: 80%;
+            left:10%;
+            right:10%;
+            color: white;
+            font-size: 24px;
+            font-style: italic;
+            animation: scroll 15s linear infinite; /* Scrolling animation */
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%) translateY(-100%);
+            }
+            100% {
+                transform: translateX(-100%) translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="warning-message">Warning</div>
+    <div id="scrolling-text">Read the message</div>
+</body>
+</html>
